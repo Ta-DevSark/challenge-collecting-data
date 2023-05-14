@@ -128,6 +128,7 @@ ENV/
 env.bak/
 venv.bak/
 immo_data_env/
+venvimmo/
 
 # Spyder project settings
 .spyderproject
