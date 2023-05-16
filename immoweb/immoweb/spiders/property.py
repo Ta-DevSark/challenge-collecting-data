@@ -1,7 +1,5 @@
 import scrapy
-import chompjs
-
-
+import pandas as pd
 class PropertySpider(scrapy.Spider):
     name = "property"
     allowed_domains = ["www.immoweb.be"]
@@ -9,9 +7,7 @@ class PropertySpider(scrapy.Spider):
 
     def parse(self, response):
         
-        script_text = response.css('script:contains("window.dataLayer")::text')
         
-        json_data = chompjs.parse_js_object(script_text)
-        
+        yield pd.concat(pd.read_html(response.text)).set_index(0).T.to_dict(orient='records')[0]
        
-        pass
+      

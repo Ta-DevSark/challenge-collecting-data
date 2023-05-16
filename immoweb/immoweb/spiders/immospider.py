@@ -6,17 +6,18 @@ class Immospider(scrapy.Spider):
     name = "immospider"
     
     def start_requests(self):
-       yield scrapy.Request("https://www.immoweb.be/en/search/house-and-apartment/for-sale?countries=BE&page=1&orderBy=relevance", 
-                            meta={'playwright' : True})
-
-
+       urls = ["https://www.immoweb.be/en/search/house-and-apartment/for-sale?countries=BE&page=1&orderBy=relevance",]
+       
+       for url in urls:
+            yield scrapy.Request(url = url, callback = self.parse)
+       
     def parse(self, response):
                 
-        properties = response.css('article.card.card--result.card--xl')
+        links = response.css('h2 a::attr(href)').extract()
 
-        for property in properties:
+        for link in links:
             yield {
-                    'url': property.css('h2 a').attrib['href']
+                    'link': link
             }
         
        
