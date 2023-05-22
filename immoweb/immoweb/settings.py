@@ -12,12 +12,15 @@ BOT_NAME = "immoweb"
 SPIDER_MODULES = ["immoweb.spiders"]
 NEWSPIDER_MODULE = "immoweb.spiders"
 
-DOWNLOAD_HANDLERS = {
-    "http": "scrapy_playwright.handler.ScrapyPlaywrightDownloadHandler",
-    "https": "scrapy_playwright.handler.ScrapyPlaywrightDownloadHandler",
-}
 
-TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
+
+# DOWNLOAD_HANDLERS = {
+#     "http": "scrapy_playwright.handler.ScrapyPlaywrightDownloadHandler",
+#     "https": "scrapy_playwright.handler.ScrapyPlaywrightDownloadHandler",
+# }
+
+# TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
+
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = "immoweb (+http://www.yourdomain.com)"
 
