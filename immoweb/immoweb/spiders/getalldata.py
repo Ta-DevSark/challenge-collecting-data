@@ -63,10 +63,10 @@ class GetalldataSpider(CrawlSpider):
             item['number_of_facades'] = property_key['building']['facadeCount']
             item['building_state'] = property_key['building']['condition']
         except TypeError:
-            item['living_area'] = 0 
+            item['living_area'] = None 
             item['kitchen_fully_equiped'] = "None"  
-            item['plot_land_surface'] = 0 
-            item['number_of_facades'] = 0   
+            item['plot_land_surface'] = None 
+            item['number_of_facades'] = None   
             item['building_state'] = "None"
         yield item
 
