@@ -1,3 +1,4 @@
+--- requirements.txt
 asttokens==2.2.1
 attrs==23.1.0
 Automat==22.10.0
@@ -55,3 +56,27 @@ urllib3==2.0.2
 w3lib==2.1.1
 wcwidth==0.2.6
 zope.interface==6.0
+
++++ requirements.txt
+# Web scraping
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
+
+# Data processing
+pandas>=2.0.0
+
+# Scrapy framework
+Scrapy>=2.9.0
+scrapy-playwright>=0.0.26
+playwright>=1.33.0
+
+# Utilities
+itemadapter>=0.8.0
+itemloaders>=1.1.0
+
+# Optional: for better shell experience
+ipython>=8.0.0
+
+# Type hints support (Python 3.8+)
+typing-extensions>=4.5.0
