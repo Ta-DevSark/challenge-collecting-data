@@ -1,4 +1,4 @@
---- get_property_links.py (原始)
+--- get_property_links.py
 import requests
 import re
 from bs4 import BeautifulSoup
@@ -33,7 +33,7 @@ def scrape_all_pages(num_pages):
 
     return urls
 
-+++ get_property_links.py (修改后)
++++ get_property_links.py
 """
 Property Links Scraper
 
