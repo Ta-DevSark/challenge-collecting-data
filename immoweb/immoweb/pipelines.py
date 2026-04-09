@@ -1,4 +1,4 @@
---- immoweb/immoweb/pipelines.py (原始)
+--- immoweb/immoweb/pipelines.py
 # Define your item pipelines here
 #
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
@@ -14,7 +14,7 @@ class ImmowebPipeline:
     def process_item(self, item, spider):
         return item
 
-+++ immoweb/immoweb/pipelines.py (修改后)
++++ immoweb/immoweb/pipelines.py
 """
 Item pipelines for processing scraped data.
 
